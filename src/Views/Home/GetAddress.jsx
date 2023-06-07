@@ -29,7 +29,7 @@ function GetAddress({
             }).finally(()=>{
                 setProgress(false);
                 // below lines need to be remove in production
-                saveUser(address)
+                // saveUser(address)
             })
         } else {
             alert("Not a valid address !" + address)
@@ -41,7 +41,7 @@ function GetAddress({
             && !isNaN(Number(hex))
         // Do things with isHex Boolean
     }
-    //test id 0x12344399ffccac4678ccaabbbbbfff
+    
     return (
         <div className="wrapper">
             <div className="room-box">

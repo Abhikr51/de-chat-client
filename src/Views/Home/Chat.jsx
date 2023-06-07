@@ -30,13 +30,13 @@ function Chat({
         setCheckProgress(true)
         await axios.get(baseURL + check_msgURL).then(({ data }) => {
             //Uncomment below line in production
-            // pushDataToStorage(MESSAGE_ENUM.RECEIVED,data[0][1]);
+            pushDataToStorage(MESSAGE_ENUM.RECEIVED,data[0][1]);
         }).catch(err => {
             console.log("check msg err log : ", err);
         }).finally(() => {
             setCheckProgress(false);
             // below lines need to be remove in production
-            pushDataToStorage(MESSAGE_ENUM.RECEIVED,"Dummy message come from receiver.");
+            // pushDataToStorage(MESSAGE_ENUM.RECEIVED,"Dummy message come from receiver.");
         })
         // setTimeout(() => {
         //     setCheckProgress(false);
@@ -72,7 +72,7 @@ function Chat({
             }).finally(() => {
                 setSentProgress(false);
                 // below lines need to be remove in production
-                pushDataToStorage(MESSAGE_ENUM.SENT,inputMsg);
+                // pushDataToStorage(MESSAGE_ENUM.SENT,inputMsg);
             })
         } else {
             alert('Please enter message first.')
