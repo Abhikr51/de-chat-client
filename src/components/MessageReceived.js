@@ -5,9 +5,11 @@ function MessageReceived({
     time = "- : - ::"
 }) {
     return (
-        <div className="message received">
-            <p>{title}</p>
-            <span className='time'>{time}</span>
+        <div className="chat-row">
+            <div className="message received">
+                <p>{title}</p>
+                <span className='time'>{time}</span>
+            </div>
         </div>
     )
 }

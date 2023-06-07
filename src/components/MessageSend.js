@@ -5,9 +5,11 @@ function MessageSend({
     time = "- : - ::"
 }) {
     return (
-        <div className="message sent">
-            <p>{title}</p>
-            <span className='time'>{time}</span>
+        <div className="chat-row">
+            <div className="message sent">
+                <p>{title}</p>
+                <span className='time'>{time}</span>
+            </div>
         </div>
     )
 }
